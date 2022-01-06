@@ -112,10 +112,10 @@ $ srvctl add service -db racdb -pdb pdb1 -service plug -preferred racdb1
 
 
 --adding pluggable database as a service to policy managed container database 
-$ srvctl add service –db racdb –pdb pdb1 –service plug –serverpool prod
+$ srvctl add service â€“db racdb â€“pdb pdb1 â€“service plug â€“serverpool prod
 
 --added service will run only one node of policy managed container database 
-$ srvctl add service –db racdb –pdb pdb1 –service plug –serverpool prod -cardinality singleton
+$ srvctl add service â€“db racdb â€“pdb pdb1 â€“service plug â€“serverpool prod -cardinality singleton
 
 
 --status of service
@@ -166,7 +166,7 @@ SQL> insert into test_tab values(1,'abc');
 $ sqlplus sys/Oracle123@pdb1 as sysdba
 
 --then query session that will be killed:
-SQL> SELECT SID, SERIAL#, INST_ID FROM GV$SESSION WHERE USERNAME='UTEST';
+SQL> SELECT SID, SERIAL#, INST_ID FROM GV$SESSION WHERE USERNAME='UTEST'; (G stands for global v$session for single instances & gv$session for rac dbs)
 
        SID    SERIAL#    INST_ID
 ---------- ---------- ----------
